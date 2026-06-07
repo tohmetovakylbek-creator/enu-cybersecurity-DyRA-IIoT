@@ -1,0 +1,53 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DyRA-IIoT docker-compose
+#
+# GPU launch (requires nvidia-docker2):
+#   docker compose run --rm dyra-gpu python scripts/train_all.py --data /data/Edge-IIoTset
+#
+# CPU-only launch:
+#   docker compose run --rm dyra-cpu python scripts/train_all.py --data /data/Edge-IIoTset
+# ─────────────────────────────────────────────────────────────────────────────
+
+x-common: &common
+  build:
+    context: .
+    dockerfile: Dockerfile
+  volumes:
+    - ${DATA_DIR:-./data}:/data          # bind-mount your dataset folder
+    - ${RESULTS_DIR:-./results}:/results # output directory
+  environment:
+    - PYTHONUNBUFFERED=1
+    - RESULTS_DIR=/results
+
+services:
+
+  dyra-gpu:
+    <<: *common
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+
+  dyra-cpu:
+    <<: *common
+    build:
+      context: .
+      dockerfile: Dockerfile.cpu     # see note below
+
+# ─── Dockerfile.cpu ──────────────────────────────────────────────────────────
+# If you need a CPU-only image create Dockerfile.cpu:
+#   FROM python:3.11-slim
+#   WORKDIR /workspace
+#   COPY requirements.txt .
+#   RUN pip install --no-cache-dir -r requirements.txt \
+#    && pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   COPY . /workspace/DyRA-IIoT
+#   WORKDIR /workspace/DyRA-IIoT
+#   RUN pip install -e .
