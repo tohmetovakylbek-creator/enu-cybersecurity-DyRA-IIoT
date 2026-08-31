@@ -1,0 +1,58 @@
+{
+  "n_packets_total": 2219201,
+  "n_packets_train": 1775355,
+  "n_packets_test": 443846,
+  "n_windows_train": 1774620,
+  "n_windows_test": 443111,
+  "n_blocks": 15,
+  "train_ratio": 0.8,
+  "window_len": 50,
+  "window_stride": 1,
+  "n_features": 36,
+  "binary_balance_train": {
+    "normal": 1292465,
+    "attack": 482155
+  },
+  "binary_balance_test": {
+    "normal": 323080,
+    "attack": 120031
+  },
+  "class_counts_train": {
+    "Normal": 1292514,
+    "MITM": 971,
+    "Uploading": 30107,
+    "Ransomware": 8740,
+    "SQL_injection": 40962,
+    "DDoS_HTTP": 39928,
+    "DDoS_TCP": 40049,
+    "Password": 40122,
+    "Port_Scanning": 18051,
+    "Vulnerability_scanner": 40088,
+    "Backdoor": 19889,
+    "XSS": 12732,
+    "Fingerprinting": 800,
+    "DDoS_UDP": 97254,
+    "DDoS_ICMP": 93148
+  },
+  "class_counts_test": {
+    "Normal": 323129,
+    "MITM": 243,
+    "Uploading": 7527,
+    "Ransomware": 2185,
+    "SQL_injection": 10241,
+    "DDoS_HTTP": 9983,
+    "DDoS_TCP": 10013,
+    "Password": 10031,
+    "Port_Scanning": 4513,
+    "Vulnerability_scanner": 10022,
+    "Backdoor": 4973,
+    "XSS": 3183,
+    "Fingerprinting": 201,
+    "DDoS_UDP": 24314,
+    "DDoS_ICMP": 23288
+  },
+  "class_weights": {
+    "0": 0.6865253604546351,
+    "1": 1.8403003183623523
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "tcp.ack": {
+    "status": "dropped",
+    "train_mean": 23761430.35550411,
+    "train_std": 165415379.7873606,
+    "test_mean": 18874322.03532306,
+    "test_std": 162779992.605519,
+    "shift_factor": 0.029544461503297734,
+    "n_unique": 146932
+  },
+  "tcp.ack_raw": {
+    "status": "dropped",
+    "train_mean": 1586612021.508103,
+    "train_std": 1323302731.4331205,
+    "test_mean": 1521989375.1238155,
+    "test_std": 1390973470.147833,
+    "shift_factor": 0.04883436333143651,
+    "n_unique": 505785
+  },
+  "tcp.seq": {
+    "status": "dropped",
+    "train_mean": 10841574.633861313,
+    "train_std": 38571895.85052315,
+    "test_mean": 48150.65860961003,
+    "test_std": 408935.7340567553,
+    "shift_factor": 0.279826120475883,
+    "n_unique": 213250
+  },
+  "udp.stream": {
+    "status": "dropped",
+    "train_mean": 57767.06822184859,
+    "train_std": 293013.2920592091,
+    "test_mean": 128875.29049490139,
+    "test_std": 566030.4918305048,
+    "shift_factor": 0.24267916917121968,
+    "n_unique": 120450
+  },
+  "mqtt.conack.flags": {
+    "status": "dropped",
+    "train_mean": 0.0,
+    "train_std": 0.0,
+    "test_mean": 136.37196009426694,
+    "test_std": 14374.158650096299,
+    "shift_factor": 14374158650096.297,
+    "n_unique": 11
+  },
+  "tcp.flags": {
+    "status": "retained",
+    "train_mean": 14.470710928236889,
+    "train_std": 8.194864192208353,
+    "test_mean": 13.999010918201359,
+    "test_std": 8.368394152757237,
+    "shift_factor": 0.05756044261038769,
+    "n_unique": 9
+  },
+  "dns.qry.name.len": {
+    "status": "retained",
+    "train_mean": 0.00012166580768353371,
+    "train_std": 0.011029551446671568,
+    "test_mean": 2.478337080879404e-05,
+    "test_std": 0.004978228258459569,
+    "shift_factor": 0.008783896366336481,
+    "n_unique": 2
+  }
+}

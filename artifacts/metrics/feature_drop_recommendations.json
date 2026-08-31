@@ -1,0 +1,26 @@
+{
+  "huge_scale_features": [],
+  "shift_features": [
+    {
+      "name": "udp.port",
+      "train_std_orig": 341.89935302734375,
+      "test_norm_std": 7.460705280303955
+    },
+    {
+      "name": "udp.time_delta",
+      "train_std_orig": 2.418537139892578,
+      "test_norm_std": 10.413957595825195
+    },
+    {
+      "name": "dns.retransmission",
+      "train_std_orig": 0.1330169290304184,
+      "test_norm_std": 9.249114036560059
+    }
+  ],
+  "recommended_drops": [
+    "dns.retransmission",
+    "udp.port",
+    "udp.time_delta"
+  ],
+  "n_features_after_drop": 33
+}

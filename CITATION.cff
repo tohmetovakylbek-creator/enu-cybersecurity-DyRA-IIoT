@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying manuscript."
+title: "DyRA-IIoT: A Hybrid Framework for Asset-Aware Dynamic Risk Assessment in IIoT Networks"
+type: software
+version: 1.0.0-submission
+date-released: 2026-08-31
+authors:
+  - family-names: Tokhmetov
+    given-names: Akylbek
+  - family-names: Kassekeyeva
+    given-names: Aislu
+  - family-names: Kantureyeva
+    given-names: Mansiya
+  - family-names: Tanchenko
+    given-names: Liliya
+  - family-names: Alimagambetova
+    given-names: Ainagul
+license: MIT
+repository-code: "https://github.com/tohmetovakylbek-creator/enu-cybersecurity-DyRA-IIoT"

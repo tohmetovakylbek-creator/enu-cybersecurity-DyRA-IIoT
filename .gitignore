@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+DNN-EdgeIIoT-dataset.csv
+artifacts/checkpoints/
+artifacts/logs/
+artifacts/windows/train.npz
+artifacts/windows/test.npz
+*.zip

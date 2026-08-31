@@ -1,0 +1,341 @@
+{
+  "features_tested": [
+    "arp.opcode",
+    "arp.hw.size"
+  ],
+  "active_threshold": 0.1,
+  "per_class": {
+    "Normal": {
+      "n_rows": 1615643,
+      "group": "Normal",
+      "arp.opcode": {
+        "n_nonzero": 3071,
+        "frac_nonzero": 0.0019007912020167822,
+        "mean": 0.002118661115110207,
+        "std": 0.05049665549693738,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 3071,
+        "frac_nonzero": 0.0019007912020167822,
+        "mean": 0.011404747212100693,
+        "std": 0.2613396544989532,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "DDoS_HTTP": {
+      "n_rows": 49911,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 4,
+        "frac_nonzero": 8.01426539239847e-05,
+        "mean": 0.00014024964436697322,
+        "std": 0.016138276094124958,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 4,
+        "frac_nonzero": 8.01426539239847e-05,
+        "mean": 0.00048085592354390815,
+        "std": 0.053711305316890626,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "DDoS_ICMP": {
+      "n_rows": 116436,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 7,
+        "frac_nonzero": 6.0118863581710126e-05,
+        "mean": 8.588409083101447e-05,
+        "std": 0.011722080414865157,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 7,
+        "frac_nonzero": 6.0118863581710126e-05,
+        "mean": 0.00036071318149026073,
+        "std": 0.04652041460415269,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "DDoS_TCP": {
+      "n_rows": 50062,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 1,
+        "frac_nonzero": 1.9975230713914747e-05,
+        "mean": 3.9950461427829494e-05,
+        "std": 0.008938642336299775,
+        "max": 2.0,
+        "n_unique": 1,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 1,
+        "frac_nonzero": 1.9975230713914747e-05,
+        "mean": 0.00011985138428348847,
+        "std": 0.02681592700889932,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "DDoS_UDP": {
+      "n_rows": 121568,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 0,
+        "frac_nonzero": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "max": 0.0,
+        "n_unique": 0,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 0,
+        "frac_nonzero": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "max": 0.0,
+        "n_unique": 0,
+        "active": false
+      }
+    },
+    "Fingerprinting": {
+      "n_rows": 1001,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 82,
+        "frac_nonzero": 0.08191808191808192,
+        "mean": 0.12187812187812187,
+        "std": 0.43237012524648766,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 82,
+        "frac_nonzero": 0.08191808191808192,
+        "mean": 0.4915084915084915,
+        "std": 1.6454392580177477,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "Password": {
+      "n_rows": 50153,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 19,
+        "frac_nonzero": 0.00037884074731322153,
+        "mean": 0.0005184136542180927,
+        "std": 0.02823633678986981,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 19,
+        "frac_nonzero": 0.00037884074731322153,
+        "mean": 0.002273044483879329,
+        "std": 0.1167608674687298,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "SQL_injection": {
+      "n_rows": 51203,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 15,
+        "frac_nonzero": 0.0002929515848680741,
+        "mean": 0.0004296623244731754,
+        "std": 0.02651224611326445,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 15,
+        "frac_nonzero": 0.0002929515848680741,
+        "mean": 0.0017577095092084448,
+        "std": 0.10267992750548618,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "Uploading": {
+      "n_rows": 37634,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 8,
+        "frac_nonzero": 0.00021257373651485358,
+        "mean": 0.0003188606047722804,
+        "std": 0.023050654420251462,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 8,
+        "frac_nonzero": 0.00021257373651485358,
+        "mean": 0.0012754424190891216,
+        "std": 0.08747015354491108,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "Vulnerability_scanner": {
+      "n_rows": 50110,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 13,
+        "frac_nonzero": 0.0002594292556375973,
+        "mean": 0.0003991219317501497,
+        "std": 0.02604511442975151,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 13,
+        "frac_nonzero": 0.0002594292556375973,
+        "mean": 0.0015565755338255837,
+        "std": 0.0966283099074024,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "XSS": {
+      "n_rows": 15915,
+      "group": "in-distribution",
+      "arp.opcode": {
+        "n_nonzero": 59,
+        "frac_nonzero": 0.0037071944706251964,
+        "mean": 0.005466540999057493,
+        "std": 0.09463271625303647,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 59,
+        "frac_nonzero": 0.0037071944706251964,
+        "mean": 0.022243166823751177,
+        "std": 0.36464262295041394,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "MITM": {
+      "n_rows": 1214,
+      "group": "OOD",
+      "arp.opcode": {
+        "n_nonzero": 0,
+        "frac_nonzero": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "max": 0.0,
+        "n_unique": 0,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 0,
+        "frac_nonzero": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "max": 0.0,
+        "n_unique": 0,
+        "active": false
+      }
+    },
+    "Ransomware": {
+      "n_rows": 10925,
+      "group": "OOD",
+      "arp.opcode": {
+        "n_nonzero": 505,
+        "frac_nonzero": 0.04622425629290618,
+        "mean": 0.06929061784897025,
+        "std": 0.3325990848442105,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 505,
+        "frac_nonzero": 0.04622425629290618,
+        "mean": 0.2773455377574371,
+        "std": 1.2598224792527954,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "Backdoor": {
+      "n_rows": 24862,
+      "group": "OOD",
+      "arp.opcode": {
+        "n_nonzero": 324,
+        "frac_nonzero": 0.01303193628831148,
+        "mean": 0.01954790443246722,
+        "std": 0.1794372317917266,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 324,
+        "frac_nonzero": 0.01303193628831148,
+        "mean": 0.07819161772986888,
+        "std": 0.6804673227246105,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    },
+    "Port_Scanning": {
+      "n_rows": 22564,
+      "group": "OOD",
+      "arp.opcode": {
+        "n_nonzero": 1746,
+        "frac_nonzero": 0.07737989718135083,
+        "mean": 0.10640843822017373,
+        "std": 0.3913345941433788,
+        "max": 2.0,
+        "n_unique": 2,
+        "active": false
+      },
+      "arp.hw.size": {
+        "n_nonzero": 1746,
+        "frac_nonzero": 0.07737989718135083,
+        "mean": 0.46427938308810496,
+        "std": 1.6031596779385262,
+        "max": 6.0,
+        "n_unique": 1,
+        "active": false
+      }
+    }
+  },
+  "in_dist_classes_arp_active": [],
+  "mitm_arp_active_features": []
+}
