@@ -44,18 +44,44 @@ checkpoint provenance was verified from the submitted materials.
 
 ```text
 .
-├── dataset_loader_v2.py      # leakage-aware preprocessing and windows
-├── train_v2.py               # Section 4.2 protocol (TiDE)
-├── baselines_v2.py           # Section 4.2 baseline backbones
-├── ood_test.py               # Section 4.7 held-out-class protocol
-├── train_three_way.py        # Section 4.8.3 validation protocol
-├── export_quantize.py        # final-checkpoint ONNX/INT8 export
-├── build_tables.py           # rebuild Tables 6 and 10 from JSON metrics
-├── analysis/                 # risk, ablation, robustness analyses
-├── artifacts/metrics/        # reported per-seed and aggregate results
-├── artifacts/onnx/           # verified FP32 exports
-├── artifacts/windows/        # normalization statistics only
-└── scripts/verify_snapshot.py
+├── analysis/
+│   └── table9/
+│       ├── regenerate_table9_traces.py   # reconstruct window-level traces
+│       └── recalculate_table9.py         # recompute Table 9 metrics
+├── artifacts/
+│   ├── metrics/                          # reported per-seed and aggregate results
+│   ├── onnx/                             # verified FP32 ONNX exports
+│   ├── table9/
+│   │   ├── table9_recomputed.csv         # recomputed aggregate Table 9
+│   │   └── table9_per_class_audit.csv    # class-level Table 9 audit
+│   ├── table9_traces/
+│   │   ├── cnn_seed42_table9.npz
+│   │   ├── dlinear_seed42_table9.npz
+│   │   ├── lstm_seed42_table9.npz
+│   │   ├── tide_seed42_table9.npz
+│   │   ├── transformer_seed42_table9.npz
+│   │   ├── trace_manifest.json           # trace provenance and structure
+│   │   └── trace_validation.csv          # trace validation results
+│   └── windows/                          # normalization statistics only
+├── scripts/
+│   └── verify_snapshot.py                # verify the repository snapshot
+├── dataset_loader_v2.py                  # leakage-aware preprocessing and windows
+├── train_v2.py                           # Section 4.2 protocol (TiDE)
+├── baselines_v2.py                       # Section 4.2 baseline backbones
+├── ood_test.py                           # Section 4.7 held-out-class protocol
+├── train_three_way.py                    # Section 4.8.3 validation protocol
+├── export_quantize.py                    # final-checkpoint ONNX/INT8 export
+├── build_tables.py                       # rebuild Tables 6 and 10
+├── config.py                             # experiment configuration
+├── feature_list.py                       # model input-feature definition
+├── tide_model.py                         # TiDE model definition
+├── measure_tide_latency.py               # TiDE latency measurement
+├── requirements.txt                      # Python dependencies
+├── ARTIFACT_MANIFEST.sha256               # repository artifact checksums
+├── RELEASE_ASSETS.sha256                  # release-asset checksums
+├── CITATION.cff                           # citation metadata
+├── LICENSE                                # software license
+└── README.md
 ```
 
 ## Environment
@@ -124,6 +150,7 @@ repository root:
 
 ```bash
 python analysis/table9/recalculate_table9.py
+```
 
 ## Verification
 
