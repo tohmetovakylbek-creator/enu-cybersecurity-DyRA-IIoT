@@ -96,6 +96,35 @@ python build_tables.py
 Run each command for seeds `42`, `123`, `456`, `789`, and `2024` to reproduce
 the five-seed summaries. Use `--help` for the exact command-line options.
 
+## Reproduce Table 9
+
+Table 9 was recomputed from the window-level probability traces produced
+by the five seed-42 backbone checkpoints. The reconstructed traces are
+provided in:
+
+`artifacts/table9_traces/`
+
+This directory contains one NPZ file for each backbone:
+
+- `cnn_seed42_table9.npz`
+- `dlinear_seed42_table9.npz`
+- `lstm_seed42_table9.npz`
+- `tide_seed42_table9.npz`
+- `transformer_seed42_table9.npz`
+
+It also contains:
+
+- `trace_manifest.json`, which records the provenance and structure of
+  the reconstructed traces;
+- `trace_validation.csv`, which reports the validation checks performed
+  on the five traces.
+
+To recompute the aggregate and class-level Table 9 results, run from the
+repository root:
+
+```bash
+python analysis/table9/recalculate_table9.py
+
 ## Verification
 
 After downloading and unpacking the release checkpoint asset into
