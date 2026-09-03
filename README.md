@@ -151,6 +151,20 @@ repository root:
 ```bash
 python analysis/table9/recalculate_table9.py
 ```
+The script writes:
+
+- `artifacts/table9/table9_recomputed.csv`, containing the aggregate
+  Table 9 results;
+- `artifacts/table9/table9_per_class_audit.csv`, containing the
+  corresponding class-level audit.
+
+The reported false-alert counts are 0-to-1 transitions in the confirmed
+binary alert sequence, rather than the number of individual
+alert-positive windows. The corresponding rate is reported in false
+alerts per hour.
+
+The original Edge-IIoTset CSV file is not redistributed because its
+licensing remains with the dataset authors.
 
 ## Verification
 
